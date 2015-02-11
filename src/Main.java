@@ -1,3 +1,5 @@
+import com.ultronicsystems.library.sort.InsertionSort;
+import com.ultronicsystems.library.sort.MergeSort;
 import com.ultronicsystems.library.textprocessing.LineByLineRegex;
 
 public class Main {
@@ -10,10 +12,14 @@ public class Main {
 
         //QuickSort.quickSort(gayArray,0,gayArray.length-1);
         //CountingSort.countingSort(gayArray);
+        //MergeSort.mergeSort(gayArray);
+        InsertionSort.insertionSort(gayArray);
+
         //IntegersInRange.integersInRange(gayArray,2,6);
         LineByLineRegex utility = new LineByLineRegex();
-        utility.reverseCommaNames("chars.txt");
-        utility.stripPatternRemoveDupes("(^\\W)","chars.txt");
+        utility.removeDuplicates("chars.txt");
+        //utility.reverseCommaNames("chars.txt");
+        //utility.stripPatternRemoveDupes("(^\\W)","chars.txt");
         utility.sortTextFile("chars.txt");
 
         for(int i=0;i<gayArray.length;i++){
